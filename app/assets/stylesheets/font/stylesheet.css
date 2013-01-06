@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'pacifico';
-    src: url('/font/pacifico-webfont.eot');
-    src: url('/font/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/font/pacifico-webfont.woff') format('woff'),
-         url('/font/pacifico-webfont.ttf') format('truetype'),
-         url('/font/pacifico-webfont.svg#pacificoregular') format('svg');
+    src: url('/fonts/pacifico-webfont.eot');
+    src: url('/fonts/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/pacifico-webfont.woff') format('woff'),
+         url('/fonts/pacifico-webfont.ttf') format('truetype'),
+         url('/fonts/pacifico-webfont.svg#pacificoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -19,11 +19,11 @@
 
 @font-face {
     font-family: 'lorimer';
-    src: url('/font/lorimer_medium-webfont.eot');
-    src: url('/font/lorimer_medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/font/lorimer_medium-webfont.woff') format('woff'),
-         url('/font/lorimer_medium-webfont.ttf') format('truetype'),
-         url('/font/lorimer_medium-webfont.svg#lorimerregular') format('svg');
+    src: url('/fonts/lorimer_medium-webfont.eot');
+    src: url('/fonts/lorimer_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lorimer_medium-webfont.woff') format('woff'),
+         url('/fonts/lorimer_medium-webfont.ttf') format('truetype'),
+         url('/fonts/lorimer_medium-webfont.svg#lorimerregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -34,11 +34,11 @@
 
 @font-face {
     font-family: 'distro';
-    src: url('/font/distro__-webfont.eot');
-    src: url('/font/distro__-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/font/distro__-webfont.woff') format('woff'),
-         url('/font/distro__-webfont.ttf') format('truetype'),
-         url('/font/distro__-webfont.svg#distroregular') format('svg');
+    src: url('/fonts/distro__-webfont.eot');
+    src: url('/fonts/distro__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/distro__-webfont.woff') format('woff'),
+         url('/fonts/distro__-webfont.ttf') format('truetype'),
+         url('/fonts/distro__-webfont.svg#distroregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
