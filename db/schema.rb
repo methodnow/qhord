@@ -11,19 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130105174355) do
+ActiveRecord::Schema.define(version: 20130106165037) do
 
   create_table "chords", force: true do |t|
-    t.string   "name"
-    t.string   "subname"
+    t.string   "root_note"
     t.string   "alt"
-    t.string   "bass"
-    t.string   "open"
-    t.text     "fingering"
-    t.integer  "chordtype_id"
+    t.string   "chord_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "voicings", force: true do |t|
+    t.text     "fingering"
+    t.text     "meta"
+    t.string   "bass"
+    t.string   "open"
     t.integer  "frets"
+    t.integer  "fretposition"
+    t.string   "formula"
+    t.integer  "chord_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

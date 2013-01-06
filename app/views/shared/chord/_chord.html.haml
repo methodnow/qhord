@@ -1,10 +1,13 @@
 .guitar-wrap(class="#{"three" if chord.frets == 3} #{"four" if chord.frets == "4"}")
   .chord-information
     %h1.name
-      = chord.name
-      %span.subname= chord.subname
+      = chord.chord.root_note
+      %span.subname= chord.chord.chord_type
+    %h5.formula
+      Formula
+    %span.steps= chord.formula.join(" - ")
   .guitar
-    = render "shared/chord/nut_string", frets: chord.frets, bass: chord.bass, open: chord.open
+    = render "shared/chord/nut_string", frets: chord.frets, bass: chord.bass, open: chord.open, fretposition: chord.fretposition
     .fretboard(class="#{"three" if chord.frets == 3} #{"four" if chord.frets == "4"}")
       = render "shared/chord/frets", number: (chord.frets - 1)
       - chord.fingering.each_pair do |f,v|

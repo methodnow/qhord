@@ -1,7 +1,11 @@
 - frets ||= 2
 - open ||= [true, true, true, true ,true, false]
 - bass ||= [false, false, false, false, true, false]
-.nut(class="spacer-#{frets ? frets : 2}")
+- fretposition ||= 1
+.nut(class="spacer-#{frets ? frets : 2} #{fretposition > 1 ? "hidden" : ""}")
+  - if fretposition > 1
+    .fretposition
+      .text= "Start at fret #{fretposition}"
   .strings.e(class="#{open[0] ? "played" : "unplayed"}")
     - if bass[0]
       .bass Bass

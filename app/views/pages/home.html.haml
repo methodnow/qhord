@@ -23,17 +23,23 @@
             = render "shared/chord/ring_finger"
 
 .row
-  .three.columns
-  .six.columns
-    = render 'shared/chord/chord', chord: @c_chord
-  .three.columns
-%br
-%br
+  .twelve.columns.beta
+    .row
+      .three.columns
+      .six.columns
+        %h1 Why do guitar chord charts have to be ugly?
+        %h2 With qhord you get to learn the guitar with pretty looking chords!
+        %h1.coming Coming Soon
+      .three.columns
 .row
   .three.columns
   .six.columns
-    = render 'shared/chord/chord', chord: @f_chord
+    %h3.example C Major Example
+    .chord(class="root_#{@c_chord.root_note}")
+      .voicings
+        %h5 Voicings
+        %ul.voice-list
+          - @c_chord.voicings.each_with_index do |v,i|
+            %li= link_to i+1, chord_voicing_path(@c_chord.root_note, @c_chord.chord_type,v.id), remote: true, class: "voicing-button #{"active" if i == 0}"
+      .voicing= render 'shared/chord/chord', chord: @c_chord.default_voicing
   .three.columns
-%br
-%br
-

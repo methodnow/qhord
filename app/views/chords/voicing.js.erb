@@ -1,0 +1,1 @@
+$('.chord.root_<%= @root %> .voicing').hide().html("<%= escape_javascript(render 'shared/chord/chord', chord: @voicing) %>").fadeIn();

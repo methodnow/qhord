@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fingering: MyText
+  meta: MyText
+  bass: MyString
+  open: MyString
+  frets: 1
+  fretposition: 1
+  formula: MyString
+  chord_id: 1
+
+two:
+  fingering: MyText
+  meta: MyText
+  bass: MyString
+  open: MyString
+  frets: 1
+  fretposition: 1
+  formula: MyString
+  chord_id: 1
