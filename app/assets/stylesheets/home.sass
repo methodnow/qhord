@@ -1,0 +1,63 @@
+@import "compass/css3"
+body
+  background: #AFCAB9
+.centerpiece
+  width: 640px
+  height: 190px
+  margin: 50px auto
+  background: #345
+  +border-radius(25px 8px 8px 25px)
+  position: relative
+  h1.hero-head
+    font-size: 112px
+    font-family: distro
+    margin: 0px 0px 0px 20px
+    line-height: 128px
+    padding-top: 5px
+    color: #CEF
+    text-shadow: 2px 2px 0px #333
+  h4.sub-text
+    margin: -20px 0px 0px 95px
+    font-family: Pacifico
+    font-size: 24px
+    color: #ACE
+    text-shadow: 1px 1px 0px #000
+    span
+      color: #F33
+      text-shadow: 1px 1px 0px #222
+  .nav-links
+    position: absolute
+    bottom: -40px
+    left: 50%
+    margin-left: -150px
+    width: 300px
+    ul.nav-tabs
+      li
+        background: #345
+        font-family: Lobster Two
+        display: inline-block
+        padding: 4px 10px
+        +border-radius(0px 0px 8px 8px)
+
+  // Front Page Guitar
+  .guitar.front
+    width: 260px
+    right: 1px
+    .nut
+      .strings
+        position: absolute
+        right: -260px
+        width: 278px
+        .bass
+          display: none
+        &.played, &.unplayed
+          &:after
+            display: none
+    .fretboard
+      position: absolute
+      right: 5px
+      background: #211
+      width: 260px
+      height: 178px
+      top: 6px
+      +border-radius(0px 5px 5px 0px)

@@ -1,0 +1,39 @@
+.row
+  .twelve.columns
+    .centerpiece
+      %h1.hero-head qhord
+      %h4.sub-text
+        the
+        %span Über
+        chord library
+      - if false
+        .nav-links
+          %ul.nav-tabs
+            %li Home
+            %li Chord Book
+      .guitar.front
+        = render "shared/chord/nut_string"
+        .fretboard
+          = render "shared/chord/frets", number: 1
+          .circle.fret1.b
+            = render "shared/chord/index_finger"
+          .circle.fret2.d.leftoffset
+            = render "shared/chord/middle_finger"
+          .circle.fret2.g.rightoffset
+            = render "shared/chord/ring_finger"
+
+.row
+  .three.columns
+  .six.columns
+    = render 'shared/chord/chord', chord: @c_chord
+  .three.columns
+%br
+%br
+.row
+  .three.columns
+  .six.columns
+    = render 'shared/chord/chord', chord: @f_chord
+  .three.columns
+%br
+%br
+

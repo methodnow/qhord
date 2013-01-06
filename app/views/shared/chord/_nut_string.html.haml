@@ -1,0 +1,22 @@
+- frets ||= 2
+- open ||= [true, true, true, true ,true, false]
+- bass ||= [false, false, false, false, true, false]
+.nut(class="spacer-#{frets ? frets : 2}")
+  .strings.e(class="#{open[0] ? "played" : "unplayed"}")
+    - if bass[0]
+      .bass Bass
+  .strings.b(class="#{open[1] ? "played" : "unplayed"}")
+    - if bass[1]
+      .bass Bass
+  .strings.g(class="#{open[2] ? "played" : "unplayed"}")
+    - if bass[2]
+      .bass Bass
+  .strings.d(class="#{open[3] ? "played" : "unplayed"}")
+    - if bass[3]
+      .bass Bass
+  .strings.a(class="#{open[4] ? "played" : "unplayed"}")
+    - if bass[4]
+      .bass Bass
+  .strings.E(class="#{open[5] ? "played" : "unplayed"}")
+    - if bass[5]
+      .bass Bass

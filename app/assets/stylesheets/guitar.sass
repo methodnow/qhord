@@ -1,0 +1,229 @@
+@import "compass/css3"
+// Generic Guitar
+.guitar-wrap
+  position: relative
+  height: 185px
+  margin-left: 42.5px
+  &.three
+    width: 415px
+  &.four
+    width: 545px
+  .chord-information
+    position: absolute
+    left: -150px
+    width: 125px
+    .name
+      font-family: "Lorimer"
+      border-bottom: 1px solid rgba(100,100,100,0.4)
+      .subname
+        font-size: 20px
+    .alt
+      font-size: 20px
+      color: #777
+.guitar
+  position: absolute
+  top: 0px
+  right: 0px
+  width: 260px
+  &.threefret
+    width: 390px
+  &.fourfret
+    width: 520px
+  .nut
+    position: absolute
+    right: 260px
+    top: 5px
+    width: 25px
+    height: 180px
+    background: #FEB
+    z-index: 200
+    border-radius: 3px
+    box-shadow: 1px 0px 2px rgba(100,100,100,0.4)
+    &.spacer-3
+      right: 389px
+      .strings
+        width: 412px
+    &.spacer-4
+      right: 519px
+      .strings
+        width: 512px
+    .strings
+      position: absolute
+      left: 0px
+      width: 279px
+      border-top: 1px solid #999
+      z-index: 300
+      // Define Strings and Positions
+      &.e
+        top: 15px
+        &.played, &.unplayed
+          &:after
+            top: -5px
+      &.b
+        top: 45px
+        border-top: 1px solid #999
+        box-shadow: 0px 0px 1px #999
+        &.played, &.unplayed
+          &:after
+            top: -5px
+      &.g
+        top: 75px
+        border-top: 2px solid #974
+      &.d
+        top: 105px
+        border-top: 2px solid #974
+        box-shadow: 0px 0px 1px #974
+      &.a
+        top: 135px
+        border-top: 2px solid #974
+        box-shadow: 0px 1px 1px #974
+      &.E
+        top: 165px
+        border-top: 3px solid #974
+        box-shadow: 0px 0px 2px #974
+      .bass
+        position: absolute
+        right: -52px
+        top: -10px
+        font-family: BebasNeue
+        font-size: 13px
+        background: #333
+        color: #EEE
+        padding: 4px 4px 2px 4px
+        +border-radius(3px)
+      &.played, &.unplayed
+        &:after
+          content: ' '
+          position: absolute
+          right: -15px
+          top: -6px
+          border-top: 5px solid transparent
+          border-bottom: 5px solid transparent
+      &.played
+        &:after
+          border-right: 5px solid #393
+      &.unplayed
+        &:after
+          border-right: 5px solid #933
+  .fretboard
+    position: absolute
+    right: 0px
+    background: #211
+    width: 260px
+    height: 178px
+    top: 6px
+    border: 2px solid #333
+    +border-radius(0px 5px 5px 0px)
+    &.three
+      width: 390px
+    &.four
+      width: 520px
+    .fret
+      position: absolute
+      border-right: 1px solid #DDD
+      border-left: 2px solid #BBB
+      box-shadow: 0px 0px 2px #999
+      height: 174px
+      &.fret-1
+        left: 130px
+      &.fret-2
+        left: 260px
+    .circle
+      position: absolute
+      height: 29px
+      width: 29px
+      border-radius: 15px
+      background: #79A
+      color: #333
+      z-index: 350
+      text-align: center
+      line-height: 30px
+      font-family: BebasNeue
+      border: 1px solid #DCB
+      box-shadow: 0px 0px 3px #99F
+      cursor: hand
+      cursor: pointer
+      .number
+      .popup
+        position: absolute
+        font-family: Hattori Hanzo
+        font-size: 14px
+        background: #EEE
+        height: 30px
+        width: 100px
+        top: -35px
+        left: -35px
+        z-index: 450
+        +opacity(0)
+        +box-shadow(0px 1px 1px #333)
+        +border-radius(4px)
+        +transition(opacity 0.3s ease)
+        &:before
+          content: " "
+          border-top: 10px solid #EEE
+          border-right: 10px solid transparent
+          border-left: 10px solid transparent
+          position: absolute
+          bottom: -10px
+          right: 40px
+          z-index: 400
+        &:after
+          content: " "
+          border-top: 10px solid #333
+          border-right: 10px solid transparent
+          border-left: 10px solid transparent
+          position: absolute
+          bottom: -11px
+          right: 40px
+          z-index: 399
+      &:hover
+        z-index: 360
+        background: #A79
+        .popup
+          +opacity(1)
+      // Finger Position Definitions
+      &.fret1, &.fret2, &.fret3
+        &.e
+          top: -2px
+        &.b
+          top: 28px
+        &.g
+          top: 58px
+        &.d
+          top: 88px
+        &.a
+          top: 118px
+        &.E
+          top: 148px
+      &.bar
+        height: 175px
+      &.fret1
+        left: 53px
+        &.leftoffset
+          left: 38px
+          &.three-finger
+            left: 33px
+        &.rightoffset
+          left: 68px
+          &.three-finger
+            left: 73px
+      &.fret2
+        left: 183px
+        &.leftoffset
+          left: 168px
+          &.three-finger
+            left: 163px
+        &.rightoffset
+          left: 198px
+          &.three-finger
+            left: 203px
+      &.fret3
+        left: 313px
+        &.leftoffset
+          left: 298px
+          &.three-finger
+            left: 293px
+        &.rightoffset
+          left: 328px
+          &.three-finger
+            left: 333px

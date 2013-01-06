@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  subname: MyString
+  alt: MyString
+  bass: MyString
+  open: MyString
+  fingering: MyText
+  chordtype_id: 1
+
+two:
+  name: MyString
+  subname: MyString
+  alt: MyString
+  bass: MyString
+  open: MyString
+  fingering: MyText
+  chordtype_id: 1
