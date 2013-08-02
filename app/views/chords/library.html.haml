@@ -1,0 +1,22 @@
+.row
+  .large-12.columns
+    %ul.notes
+      - Note.all.each do |n|
+        %li.root_note(class="#{n.name.gsub("#","_sharp")}")
+          = link_to chord_root_note_path(n.root_name), remote: true do
+            - if n.accidental
+              = n.root
+              %span.accidental
+                = n.accidental
+            - else
+              = n.root
+            - if n.alt_name
+              = " | #{n.alt}"
+              - if n.alt_accidental
+                %span.accidental
+                  = n.alt_accidental
+
+.row
+  .large-3.columns &nbsp;
+  .large-6.columns.chordlist
+  .large-3.columns &nbsp;

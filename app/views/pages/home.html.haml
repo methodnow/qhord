@@ -1,45 +1,50 @@
 .row
   .twelve.columns
     .centerpiece
-      %h1.hero-head qhord
-      %h4.sub-text
-        the
-        %span Über
-        chord library
+      .row
+        .large-7.columns
+          %h1.hero-head qhord
+          %h4.sub-text
+            the
+            %span Über
+            chord library
+        .large-5.columns
+          = link_to "Chord Library", chord_library_path, class: "button twelve chord-lib"
+          = link_to "Song Book", song_book_path, class: "button twelve song-book"
+
       - if false
         .nav-links
           %ul.nav-tabs
             %li Home
             %li Chord Book
-      .guitar.front
-        = render "shared/chord/nut_string"
-        .fretboard
-          = render "shared/chord/frets", number: 1
-          .circle.fret1.b
-            = render "shared/chord/index_finger"
-          .circle.fret2.d.leftoffset
-            = render "shared/chord/middle_finger"
-          .circle.fret2.g.rightoffset
-            = render "shared/chord/ring_finger"
+        .guitar.front
+          = render "shared/chord/nut_string"
+          .fretboard
+            = render "shared/chord/frets", number: 1
+            .circle.fret1.b
+              = render "shared/chord/index_finger"
+            .circle.fret2.d.leftoffset
+              = render "shared/chord/middle_finger"
+            .circle.fret2.g.rightoffset
+              = render "shared/chord/ring_finger"
 
 .row
-  .twelve.columns.beta
+  .large-12.columns.beta
     .row
-      .three.columns
-      .six.columns
+      .large-3.columns &nbsp;
+      .large-6.columns
         %h1 Why do guitar chord charts have to be ugly?
         %h2 With qhord you get to learn the guitar with pretty looking chords!
-        %h1.coming Coming Soon
-      .three.columns
+      .large-3.columns &nbsp;
 .row
-  .three.columns
-  .six.columns
+  .large-3.columns &nbsp;
+  .large-6.columns
     %h3.example C Major Example
     .chord(class="root_#{@c_chord.root_note}")
       .voicings
         %h5 Voicings
         %ul.voice-list
           - @c_chord.voicings.each_with_index do |v,i|
-            %li= link_to i+1, chord_voicing_path(@c_chord.root_note, @c_chord.chord_type,v.id), remote: true, class: "voicing-button #{"active" if i == 0}"
-      .voicing= render 'shared/chord/chord', chord: @c_chord.default_voicing
-  .three.columns
+            %li= link_to i+1, chord_voicing_path(@c_chord.root_note, @c_chord.chord_name,v.id), remote: true, class: "voicing-button #{"active" if i == 0}"
+      .voicing(class="#{@c_chord.root_note}_#{@c_chord.chord_name}")= render 'shared/chord/voicing', voicing: @c_chord.default_voicing
+  .large-3.columns &nbsp;

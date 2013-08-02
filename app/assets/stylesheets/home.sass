@@ -25,19 +25,28 @@ body
     span
       color: #F33
       text-shadow: 1px 1px 0px #222
-  .nav-links
-    position: absolute
-    bottom: -40px
-    left: 50%
-    margin-left: -150px
-    width: 300px
-    ul.nav-tabs
-      li
-        background: #345
-        font-family: Lobster Two
-        display: inline-block
-        padding: 4px 10px
-        +border-radius(0px 0px 8px 8px)
+
+  .chord-lib, .song-book
+    height: 92px
+    line-height: 68px
+    font-size: 30px
+    font-family: "Lorimer"
+    background: #CEF
+    color: #345
+    border: 1px solid #456
+    width: 100%
+    padding: 10px 40px 10px 40px
+    margin-bottom: 0px
+    margin-left: -3px
+    &:hover
+      border-left: 1px solid #345
+      background: #345
+      color: #eee
+  .chord-lib
+    margin-top: 3px
+    +border-radius(0px 5px 0px 0px)
+  .song-book
+    +border-radius(0px 0px 5px 0px)
 
   // Front Page Guitar
   .guitar.front
@@ -72,9 +81,10 @@ body
     margin: 30px 0px
   h1, h2
     font-family: "Lorimer"
-    font-size: 54px
+    font-size: 40px
+    text-transform: uppercase
   h2
-    font-size: 34px
+    font-size: 25px
     color: #555
 h3.example
   text-align: center

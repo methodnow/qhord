@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  alt_name: MyString
+  scale_weight: 1
+
+two:
+  name: MyString
+  alt_name: MyString
+  scale_weight: 1

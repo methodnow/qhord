@@ -1,0 +1,15 @@
+.guitar-wrap(class="#{"three" if voicing.frets == 3} #{"four" if voicing.frets == "4"}")
+  .chord-information
+    %h1.name
+      = voicing.chord.root_note
+      %span.subname= voicing.chord.chord_name
+    %h5.formula
+      Formula
+    %span.steps= voicing.formula.join(" - ")
+  .guitar
+    = render "shared/chord/nut_string", frets: voicing.frets, bass: voicing.bass, open: voicing.open, fretposition: voicing.fretposition
+    .fretboard(class="#{"three" if voicing.frets == 3} #{"four" if voicing.frets == "4"}")
+      = render "shared/chord/frets", number: (voicing.frets - 1)
+      - voicing.fingering.each_pair do |f,v|
+        .circle(class="fret#{v[0]} #{v[1]}")
+          = render "shared/chord/#{f}_finger"

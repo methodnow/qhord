@@ -1,0 +1,4 @@
+$('.chordlist').html("");
+<% @chords.each do |c| %>
+  $('.chordlist').append("<%= escape_javascript(render "shared/chord/chord", chord: c)%>");
+<% end %>

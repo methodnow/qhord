@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130106165037) do
+ActiveRecord::Schema.define(version: 20130107184316) do
 
   create_table "chords", force: true do |t|
     t.string   "root_note"
     t.string   "alt"
-    t.string   "chord_type"
+    t.string   "chord_quality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "chord_name"
+    t.text     "component_notes"
+    t.string   "symbol"
+  end
+
+  create_table "notes", force: true do |t|
+    t.string   "name"
+    t.string   "alt_name"
+    t.integer  "scale_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
